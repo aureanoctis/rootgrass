@@ -69,91 +69,67 @@ section {
   border: 2px solid #c0c0c0; /* Silver border */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  transform: translateY(50px);
   opacity: 0;
+  transform: translateY(30px);
   animation: fadeInUp 1.5s forwards ease-in-out;
+}
+
+section:nth-child(even) {
+  background-color: #f8f8f8; /* Subtle contrast for even sections */
 }
 
 h2 {
   font-family: 'Great Vibes', cursive;
   color: #6a0dad; /* Royal purple */
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 15px;
   text-transform: capitalize;
+  text-align: center;
 }
 
 p {
   font-family: 'Georgia', serif;
   color: #555;
   font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify; /* Clean alignment for paragraphs */
 }
 
-/* Footer */
+/* Fix Footer Overlap */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
 footer {
   text-align: center;
   padding: 10px;
   background-color: #4b0082; /* Deep purple */
   color: #d4af37; /* Gold */
   font-family: 'Georgia', serif;
-  position: fixed;
-  width: 100%;
+  position: relative;
   bottom: 0;
-  animation: fadeInUp 1.5s ease-in-out;
+  width: 100%;
+  margin-top: 20px;
 }
 
-/* Keyframe Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideDown {
-  from {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/* Scroll Triggered Animations */
-section:nth-child(odd) {
-  animation: fadeInUp 1.5s forwards ease-in-out;
-}
-
-section:nth-child(even) {
-  animation: fadeIn 2s forwards ease-in-out;
-}
-
-/* Mobile Responsiveness */
+/* Responsive Fix */
 @media screen and (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
   section {
-    margin: 10px;
+    margin: 10px 10px;
     padding: 20px;
   }
-}
 
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&display=swap');
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}

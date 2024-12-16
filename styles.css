@@ -6,26 +6,37 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
+  font-family: 'Georgia', serif;
+  line-height: 1.8;
+  background-color: #f8f4f0;
   color: #333;
+  text-align: center;
 }
 
 /* Header */
 header {
-  background-color: #4CAF50;
-  color: white;
+  background-color: #5a3e36;
+  color: #f4f4f4;
   text-align: center;
-  padding: 20px;
+  padding: 30px 10px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+header p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5rem;
+  color: #f8d7c0;
 }
 
 /* Navigation */
 nav ul {
   display: flex;
   justify-content: center;
-  background-color: #333;
+  background-color: #4b2e2e;
   list-style: none;
+  padding: 10px 0;
 }
 
 nav ul li {
@@ -33,22 +44,40 @@ nav ul li {
 }
 
 nav ul li a {
-  color: white;
+  color: #f8d7c0;
   text-decoration: none;
+  font-family: 'Georgia', serif;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
+  color: #d4af37;
 }
 
 /* Sections */
 section {
-  padding: 20px;
-  margin: 20px;
+  padding: 40px;
+  margin: 20px auto;
+  max-width: 800px;
+  background-color: #fff;
+  border: 1px solid #e0d5d1;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 h2 {
-  color: #4CAF50;
+  font-family: 'Great Vibes', cursive;
+  color: #5a3e36;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+p {
+  font-family: 'Georgia', serif;
+  color: #555;
+  font-size: 1.1rem;
 }
 
 /* Mobile Responsiveness */
@@ -60,7 +89,7 @@ h2 {
 
   section {
     margin: 10px;
-    padding: 15px;
+    padding: 20px;
   }
 }
 
@@ -68,9 +97,13 @@ h2 {
 footer {
   text-align: center;
   padding: 10px;
-  background-color: #333;
+  background-color: #5a3e36;
   color: white;
+  font-family: 'Georgia', serif;
   position: fixed;
   width: 100%;
   bottom: 0;
 }
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&display=swap');

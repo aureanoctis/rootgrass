@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth; /* Smooth scrolling */
+  scroll-behavior: smooth;
 }
 
 body {
@@ -12,7 +12,14 @@ body {
   background-color: #f4f4f4; /* Soft silver */
   color: #333;
   text-align: center;
-  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures full height for content */
+}
+
+/* Main Content Wrapper */
+main {
+  flex: 1; /* Pushes footer to bottom */
 }
 
 /* Header */
@@ -23,15 +30,12 @@ header {
   padding: 30px 10px;
   font-family: 'Great Vibes', cursive;
   font-size: 2.5rem;
-  letter-spacing: 1px;
-  animation: fadeIn 1.5s ease-in-out;
 }
 
 header p {
   font-family: 'Dancing Script', cursive;
   font-size: 1.5rem;
   color: #d4af37; /* Gold */
-  animation: slideDown 1.5s ease-in-out;
 }
 
 /* Navigation */
@@ -41,7 +45,6 @@ nav ul {
   background-color: #4b0082; /* Deep purple */
   list-style: none;
   padding: 10px 0;
-  animation: fadeIn 1.5s ease-in-out;
 }
 
 nav ul li {
@@ -62,66 +65,32 @@ nav ul li a:hover {
 
 /* Sections */
 section {
-  padding: 40px;
+  padding: 40px 20px;
   margin: 20px auto;
   max-width: 800px;
   background-color: #fff;
-  border: 2px solid #c0c0c0; /* Silver border */
+  border: 2px solid #c0c0c0; /* Silver */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 1.5s forwards ease-in-out;
 }
 
-section:nth-child(even) {
-  background-color: #f8f8f8; /* Subtle contrast for even sections */
-}
-
-h2 {
-  font-family: 'Great Vibes', cursive;
-  color: #6a0dad; /* Royal purple */
-  font-size: 2.2rem;
-  margin-bottom: 15px;
-  text-transform: capitalize;
-  text-align: center;
-}
-
-p {
-  font-family: 'Georgia', serif;
-  color: #555;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  text-align: justify; /* Clean alignment for paragraphs */
-}
-
-/* Fix Footer Overlap */
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-main {
-  flex: 1;
-}
-
+/* Footer */
 footer {
   text-align: center;
-  padding: 10px;
+  padding: 15px 10px;
   background-color: #4b0082; /* Deep purple */
   color: #d4af37; /* Gold */
   font-family: 'Georgia', serif;
   position: relative;
   bottom: 0;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 20px; /* Added space to separate it from content */
 }
 
-/* Responsive Fix */
+/* Responsive Adjustments */
 @media screen and (max-width: 768px) {
   section {
-    margin: 10px 10px;
+    margin: 10px;
     padding: 20px;
   }
 
